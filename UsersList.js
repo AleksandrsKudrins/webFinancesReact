@@ -50,9 +50,12 @@ class UsersList extends Component {
           <ButtonGroup>
             <Button size="sm" color="primary" tag={Link} to={"/users/" + user.id}>Edit</Button>
             <Button size="sm" color="danger" onClick={() => this.remove(user.id)}>Delete</Button>
-			<Button size="sm" color="success" tag={Link} to={"/users/" + user.id + "/orders"}>Orders</Button>
           </ButtonGroup>
         </td>
+		<td>
+			<Button size="sm" color="warning" tag={Link} to={"/users/" + user.id + "/orders"}>View</Button>
+		</td>
+					
       </tr>
     });
 
@@ -72,6 +75,7 @@ class UsersList extends Component {
               <th width="30%">Description</th>
 			  <th width="10%">Status</th>
               <th width="10%">Actions</th>
+			  <th width="10%">Orders</th>
             </tr>
             </thead>
             <tbody>
